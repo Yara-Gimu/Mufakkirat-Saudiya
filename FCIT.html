@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة مشاريع طلاب كلية الحاسبات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <i class="fas fa-book-open logo-icon"></i>
+                <h1>مفكّرة سعودية</h1>
+            </div>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <span>وضع ليلي</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-pattern"></div>
+            <div class="hero-content">
+                <h2>استكشف مشاريع طلاب كلية الحاسبات</h2>
+                <p class="hero-description">"مفكّرة سعودية" هي مكتبة رقمية تطوعية تهدف لتجميع مشاريع طلاب وطالبات كلية الحاسبات في جامعة الملك عبدالعزيز. الهدف منها توثيق الإنجازات الأكاديمية، مشاركة المعرفة، وتقليل تكرار الأفكار بين الأجيال القادمة.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="cta-button explore-btn">
+                        <i class="fas fa-search"></i>
+                        <span>استكشف المشاريع</span>
+                    </a>
+                    <a href="#add-project" class="cta-button add-btn">
+                        <i class="fas fa-plus"></i>
+                        <span>أضف مشروعك</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <h3>
+                    <i class="fas fa-project-diagram"></i>
+                    <span>المشاريع الطلابية</span>
+                </h3>
+                <div class="results-count">عدد النتائج: <span id="results-count">0</span></div>
+            </div>
+
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label for="year">
+                        <i class="fas fa-calendar-alt"></i>
+                        السنة:
+                    </label>
+                    <select id="year" class="styled-select">
+                        <option value="all">الكل</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="department">
+                        <i class="fas fa-graduation-cap"></i>
+                        القسم:
+                    </label>
+                    <select id="department" class="styled-select">
+                        <option value="all">الكل</option>
+                        <option value="CS">علوم الحاسب (CS)</option>
+                        <option value="IT">تقنية المعلومات (IT)</option>
+                        <option value="IS">نظم معلومات (IS)</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="field">
+                        <i class="fas fa-tags"></i>
+                        المجال:
+                    </label>
+                    <select id="field" class="styled-select">
+                        <option value="all">الكل</option>
+                        <option value="صحة">صحة</option>
+                        <option value="تعلم">تعلم</option>
+                        <option value="مرور / أمن">مرور / أمن</option>
+                        <option value="خدمة مجتمعية / توعية">خدمة مجتمعية / توعية</option>
+                        <option value="أطفال/ أسرة">أطفال/ أسرة</option>
+                        <option value="كبار السن / ذوي الاحتياجات الخاصة">كبار السن / ذوي الاحتياجات الخاصة</option>
+                        <option value="ريادة الأعمال/ استثمار">ريادة الأعمال/ استثمار</option>
+                        <option value="بيئة / زراعة / طاقة">بيئة / زراعة / طاقة</option>
+                        <option value="طلاب / حياة جامعية">طلاب / حياة جامعية</option>
+                        <option value="تقنية في الحياة اليومية">تقنية في الحياة اليومية</option>
+                        <option value="أخرى">أخرى</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <button id="apply-filters" class="filter-button">
+                        <i class="fas fa-filter"></i>
+                        تطبيق التصفية
+                    </button>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projects-container">
+                <!-- سيتم ملؤه بالبيانات -->
+            </div>
+        </section>
+
+        <section id="add-project" class="add-project-section">
+            <div class="section-header">
+                <h3>
+                    <i class="fas fa-plus-circle"></i>
+                    <span>إضافة مشروع جديد</span>
+                </h3>
+            </div>
+            
+            <div class="add-project-content">
+                <p>يمكنك إضافة مشروعك إلى المكتبة لتعم الفائدة على الجميع</p>
+                
+                <ul class="benefits-list">
+                    <li><i class="fas fa-check-circle"></i> مشاركة عملك مع المجتمع الأكاديمي</li>
+                    <li><i class="fas fa-check-circle"></i> إثراء المحتوى العلمي للطلاب</li>
+                    <li><i class="fas fa-check-circle"></i> توثيق إنجازاتك الأكاديمية</li>
+                </ul>
+                
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeh6zg_Bc-tYqq2Mtcq9WWqEAFsD0EUHsBXWJBBIWZVUotIzw/viewform?usp=header" 
+                   class="cta-button submit-btn" target="_blank">
+                    <i class="fas fa-file-upload"></i>
+                    <span>نموذج إضافة مشروع</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <i class="fas fa-book-open"></i>
+                    <span>مفكّرة سعودية</span>
+                </div>
+                <p>مساحة فكرية مفتوحة من طلاب الحاسبات... وإليهم.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links-container">
+                <h4>روابط سريعة</h4>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
+                    <a href="#projects"><i class="fas fa-project-diagram"></i> تصفح المشاريع</a>
+                    <a href="#add-project"><i class="fas fa-plus"></i> إضافة مشروع</a>
+                    <a href="#" id="privacy-link"><i class="fas fa-lock"></i> سياسة الخصوصية</a>
+                </div>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>تواصل معنا</h4>
+                <div class="footer-links">
+                    <a href="mailto:fcitkau8@gmail.com"><i class="fas fa-envelope"></i> fcitkau8@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2025 مكتبة مشاريع طلاب كلية الحاسبات. جميع الحقوق محفوظة.</p>
+            <p class="designer-credit">
+                <span>تم التصميم بواسطة: يارا العلوي <i class="fas fa-butterfly" style="color: #3498db;"></i></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- نافذة سياسة الخصوصية -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-lock"></i> سياسة الخصوصية</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>تاريخ التحديث:</strong> 1 يناير 2025</p>
+                
+                <p>هذا الموقع مبادرة شخصية من يارا العلوي، طالبة في كلية الحاسبات، بهدف عرض مشاريع طلاب وطالبات الكلية لأغراض تعليمية وتوثيقية ولتقليل تكرار الأفكار.</p>
+                
+                <h4>طبيعة المشاركة</h4>
+                <p>رفع المشروع عبر الموقع يتم بشكل تطوعي من قبل الطالب أو الطالبة، ويُعد موافقة صريحة على عرض المشروع للجمهور عبر الإنترنت. المشارك يتحمل مسؤولية ما يقدمه، ويقر بأنه يدرك أن البيانات والملفات المرفوعة ستكون متاحة للعامة.</p>
+                
+                <h4>استخدام البيانات</h4>
+                <ul>
+                    <li>تستخدم البيانات فقط لعرض المشروع على الموقع.</li>
+                    <li>لا يتم بيع أو مشاركة البيانات مع أي جهة خارجية.</li>
+                    <li>الهدف من جمع البيانات هو التوثيق الأكاديمي والمشاركة العامة.</li>
+                </ul>
+                
+                <h4>الملكية الفكرية</h4>
+                <ul>
+                    <li>ملكية المشروع تعود لصاحبه.</li>
+                    <li>المشارك يقر بأنه يملك الحق الكامل في نشر المشروع.</li>
+                    <li>الموقع لا يتحمل أي مسؤولية قانونية في حال تم رفع مشروع مسروق أو مخالف.</li>
+                    <li>في حال تم الإبلاغ عن مخالفة، يتم حذف المشروع بعد التحقق.</li>
+                </ul>
+                
+                <h4>حذف أو تعديل المشروع</h4>
+                <p>يمكن لأي مشارك طلب حذف أو تعديل مشروعه في أي وقت عبر البريد التالي: <a href="mailto:fcitkau8@gmail.com">fcitkau8@gmail.com</a></p>
+                
+                <h4>شروط الاستخدام</h4>
+                <ol>
+                    <li>استخدام الموقع ورفع أي مشروع يعني الموافقة الكاملة على هذه السياسة والشروط.</li>
+                    <li>المشارك مسؤول عن دقة وصحة ما يقدمه من بيانات وملفات.</li>
+                    <li>لا يجوز رفع مشاريع تحتوي على بيانات حساسة أو لا يملك المشارك حق نشرها.</li>
+                    <li>يحق لإدارة الموقع حذف أي محتوى دون إشعار إذا ثبتت مخالفته للسياسات أو الأنظمة.</li>
+                    <li>لا يجوز نسخ أو استخدام محتويات الموقع لأغراض تجارية دون إذن من أصحاب المشاريع.</li>
+                </ol>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-button accept-btn">موافق</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
