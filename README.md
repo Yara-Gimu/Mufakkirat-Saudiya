@@ -1,63 +1,74 @@
-# 📚 Mufakkirat Saudiya | Graduation Project Archive Platform
+# 🚀 Mufakkirat Saudiya | Graduation Project Archive Platform
 
-**Mufakkirat Saudiya** is a lightweight platform designed to document and showcase graduation projects by female students at the Faculty of Computing and Information Technology, King Abdulaziz University.
+**Mufakkirat Saudiya (مفكرة سعودية)** is a lightweight, serverless platform designed to document, archive, and showcase graduation projects by female students at the Faculty of Computing and Information Technology, King Abdulaziz University (KAU).
 
-This project emerged from a real problem: many students were unknowingly repeating ideas or struggling to find inspiration. The platform offers a centralized space to browse past projects with ease and clarity.
-
----
-
-## 🎯 Purpose
-
-- Reduce project topic repetition
-- Save time and avoid duplicated efforts
-- Inspire students with real examples
-- Encourage a collaborative and transparent academic culture
+This project emerged from a real academic challenge: students were unknowingly repeating project ideas or struggling to find inspiration for their final year. This platform offers a centralized, dynamic space to browse past projects with ease, clarity, and zero redundancy.
 
 ---
 
-## 🧰 Tools & Technologies Used
+## 🎯 Purpose & Impact
 
-- **Google Forms** – For secure project submissions
-- **Google Sheets** – To manage and store submission data
-- **HTML / CSS / JS** – Frontend interface
-- **GitHub Pages** – For hosting and public access
-- **GitHub** – Version control and site updates
+- **Eliminate Redundancy:** Reduce project topic repetition across academic years.
+- **Resource Efficiency:** Save time and avoid duplicated research efforts.
+- **Spark Inspiration:** Provide students with a rich repository of real, successfully executed examples.
+- **Promote Collaboration:** Encourage a transparent, knowledge-sharing academic culture within the faculty.
+
+---
+
+## 🏗️ System Architecture (The Backend Flow)
+
+The platform leverages a modern, automated **Serverless Architecture** to ensure fast performance, high security, and zero maintenance overhead:
+
+1. **Data Ingestion:** Students submit their project details via a secure **Google Form**.
+2. **Automated Trigger:** A custom **Google Apps Script** intercepts the submission instantly.
+3. **Serverless Middleware:** The data is securely transmitted via HTTP POST request to a **Cloudflare Worker**.
+4. **Database Storage:** The Worker securely formats and injects the payload into an **Appwrite** Database.
+5. **Frontend Delivery:** The user interface is globally distributed and hosted on **Cloudflare Pages** for lightning-fast access.
+
+---
+
+## 🧰 Tech Stack
+
+- **Frontend:** HTML5, CSS3, JavaScript (Hosted on **Cloudflare Pages**)
+- **Backend/Middleware:** **Cloudflare Workers** (Serverless Edge Computing)
+- **Database:** **Appwrite** (Backend-as-a-Service for secure data storage)
+- **Data Collection:** Google Forms & Google Apps Script
+- **Version Control:** Git & GitHub
 
 ---
 
 ## ✨ Key Features
 
-- Students can submit:
-  - Project title & description
-  - Poster or PDF file
-  - Optional video link
-  - Optional contact info
+### For Students (Contributors)
+- Seamless submission process for:
+  - Project title, description, and academic field.
+  - Presentation files (Poster/PDF) via Drive links.
+  - Video demonstrations.
+  - Contact information for networking.
 
-- Visitors can:
-  - Browse by department (CS, IT, IS)
-  - Filter by academic year or topic
-  - Discover unique and diverse project ideas
-
-- Simple and intuitive user interface
-- Privacy-first design (no public email or personal info shown)
+### For Visitors (Explorers)
+- **Dynamic Browsing:** Filter projects by department (CS, IT, IS).
+- **Advanced Filtering:** Sort by academic year or specific tech domains.
+- **Privacy-First Design:** Sensitive student information is protected; contact details are only shared if explicitly provided for academic networking.
 
 ---
 
 ## 🔒 Privacy & Access
 
-To protect student privacy, the platform is shared **internally** within the university. No public display of sensitive information is allowed.
+To strictly protect student privacy and intellectual property, the platform is tailored for **internal use** within the university community. No unauthorized public display of sensitive personal information is permitted.
 
 ---
 
-## 💡 Project Background
+## 💡 Origin Story
 
-During my own graduation project journey, I found it difficult to explore what had already been done. That experience inspired me to build **Mufakkirat Saudiya** — a simple but effective solution using Google tools and GitHub Pages to support fellow students.
+During my own graduation project journey, I found it incredibly difficult to explore what previous cohorts had already accomplished. That friction inspired me to build **Mufakkirat Saudiya**. What started as a simple idea evolved into a fully automated cloud-based platform to support my fellow students and elevate the standard of project ideation at our faculty.
 
 ---
 
-## 👩‍💻 Developed by
+## 👩‍💻 Developed By
 
-**Yara** – Computer Science student and tech enthusiast dedicated to building practical, empowering tools for students and creators.
+**Yara** Computer Science Senior | Cloud Computing Enthusiast  
+*Dedicated to building practical, scalable, and empowering technical tools for students and creators.*
 
 ---
 
